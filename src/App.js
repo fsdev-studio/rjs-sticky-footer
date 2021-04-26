@@ -1,23 +1,60 @@
 import logo from './logo.svg';
 import './App.css';
+import Footer from './components/Footer';
+
+
+function FooterBody(){
+  return(
+    <div style={{display:'flex', flexDirection:'row'}}>
+        <div style={{color:'white', fontSize:16,padding:45,width:'50%',height:'50%'}}>
+          This is my footer
+        </div>
+        <div style={{ fontSize:16,color:'white',padding:45,width:'50%',height:'50%'}}>
+          This is my footer
+        </div>
+    </div>
+  )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display:'flex', flexDirection:'row'}}>
+      <div style={{color:'black', fontSize:16,background:'white',padding:45,width:'50%',height:'50%',margin:45}}>
+     Hello m
+      </div>
+      </div>
+      <div style={{display:'flex', flexDirection:'row'}}>
+        <div style={{color:'black', fontSize:16,background:'white',padding:45,width:'50%',height:'50%',margin:45}}>
+       Hello m
+        </div>
+        </div>
+        <div style={{display:'flex', flexDirection:'row'}}>
+          <div style={{color:'black', fontSize:16,background:'white',padding:45,width:'50%',height:'50%',margin:45}}>
+         Hello m
+          </div>
+          </div>
+          <div style={{display:'flex', flexDirection:'row'}}>
+            <div style={{color:'black', fontSize:16,background:'white',padding:45,width:'50%',height:'50%',margin:45}}>
+           Hello m
+            </div>
+            </div>
+            <div style={{display:'flex', flexDirection:'row'}}>
+              <div style={{color:'black', fontSize:16,background:'white',padding:45,width:'50%',height:'50%',margin:45}}>
+             Hello m
+              </div>
+              </div>
+              <div style={{display:'flex', flexDirection:'row'}}>
+                <div style={{color:'black', fontSize:16,background:'white',padding:45,width:'50%',height:'50%',margin:45}}>
+               Hello m
+                </div>
+                </div>
+
+
+      <Footer
+      footerBody={<FooterBody/>}
+      isSticky={false}
+      />
     </div>
   );
 }
