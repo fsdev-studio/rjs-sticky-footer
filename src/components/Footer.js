@@ -1,31 +1,59 @@
-import React from 'react';
+import React ,{useState} from 'react';
+import './Footer.css';
+
+function checkScroll(){
+  return document.documentElement.scrollHeight == document.documentElement.clientHeight
+}
+
+function Footer({footerBody, isSticky,background,opacity}) {
+const [isScroll,setIsScroll]=useState(checkScroll())
+//var hasScrollbar = document.body.scrollHeight > document.body.clientHeight
+  var c = '';//document.documentElement.scrollHeight === document.documentElement.clientHeight ? 'absolute' : 'relative' ;
+  // if(Number(document.documentElement.scrollHeight) > Number(document.documentElement.clientHeight)){
+  //   c = 'relative';
+  // }
+  // else{
+  //   c = 'absolute';
+  // }
+
+  //alert(checkScroll())
+  const p = isSticky ? 'fixed' : c ;
+console.log(c)
+
+//   if(document.body.clientHeight > document.documentElement.clientHeight){
+//     return(
+// <div style={{marginTop:100}}>
+//       <div className="footer"
+//       style={{
+//         position: isSticky ? 'fixed' : 'absolute',
+//         bottom: 0,
+//         background:background,
+//         opacity:opacity,
+//           marginTop:isSticky ? 10 : 0,
+//       }}>
+//       {footerBody}
+//       </div>
+//       </div>
+//     )
+//   }
+//   else{
+    return(
+      <div style={{marginTop:100}}>
+      <div className="footer"
+      style={{
+        position: isSticky ? 'fixed' :(checkScroll() ? 'absolute':'relative'),
+        bottom:0,
+        background:background,
+        opacity:opacity,
+        marginTop:isSticky ? 10 : 0,
+      }}>
+      {footerBody}
+      </div>
+      </div>
+    )
+//  }
 
 
-
-
-function Footer({footerBody, isSticky}) {
-  
-var hasScrollbar = document.documentElement.scrollHeight > document.documentElement.clientHeight
-  const c = !hasScrollbar ? 'relative' : 'absolute';
-  const p = isSticky ? {'pos':'fixed','bottom':0} : {'pos':c,'bottom':0};
-
-  return (
-    <div style={{
-      position:p.pos,
-      bottom:p.bottom,
-      left:0,
-      right:0,
-      top:'auto',
-      height:'auto',
-      padding:10,
-      background:'black',
-      opacity:0.8,
-      marginTop:10,
-    }}>
-    {footerBody}
-
-    </div>
-  );
 }
 
 export default Footer;

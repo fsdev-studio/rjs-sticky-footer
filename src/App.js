@@ -26,7 +26,7 @@ function App() {
       </div>
       <div style={{display:'flex', flexDirection:'row'}}>
         <div style={{color:'black', fontSize:16,background:'white',padding:45,width:'50%',height:'50%',margin:45}}>
-       Hello m
+       Hello v
         </div>
         </div>
         <div style={{display:'flex', flexDirection:'row'}}>
@@ -52,8 +52,10 @@ function App() {
 
 
       <Footer
-      footerBody={<FooterBody/>}
-      isSticky={false}
+        background={'blue'}
+        opacity={0.5}
+        footerBody={<FooterBody/>}
+        isSticky={false}
       />
     </div>
   );

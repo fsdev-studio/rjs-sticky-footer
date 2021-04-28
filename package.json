@@ -1,6 +1,6 @@
 {
   "name": "rjs-sticky-footer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A sticky/not sticky footer for react web apps",
   "private": false,
   "dependencies": {
@@ -53,5 +53,4 @@
 ],
 "author": "@fsdevCOZA",
 "license": "MIT"
-
 }
