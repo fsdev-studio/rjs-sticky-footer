@@ -32,6 +32,5 @@ footerBody| can be a string or a react component
 isSticky| can be set to true or false
 
 
-https://frontend.fsdev.studio- Examples
 
-[Demo](https://frontend.fsdev.studio)
+[Examples](https://fsdev.studio)
